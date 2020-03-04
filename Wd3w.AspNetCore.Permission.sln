@@ -5,11 +5,16 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Items", "Items", "{90D9A620-C151-4116-B2DC-17173C378C3D}"
 ProjectSection(SolutionItems) = preProject
 	.gitignore = .gitignore
+	README.md = README.md
 EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCCAEF38-B024-409D-AA69-67B4AB3E8E9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCCAEF38-B024-409D-AA69-67B4AB3E8E9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal
