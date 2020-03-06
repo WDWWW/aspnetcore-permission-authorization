@@ -6,4 +6,24 @@
         <IsPackable>true</IsPackable>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <PackageId>Wd3w.AspNetCore.Permission</PackageId>
+        <Version>3.1.1</Version>
+        <Authors>Jinseoung Lee</Authors>
+        <PackageTags>aspnetcore;aspnet;permission;authorization</PackageTags>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageProjectUrl>https://github.com/WDWWW/aspnetcore-permission-authorization</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/WDWWW/aspnetcore-permission-authorization/blob/master/LICENSE</PackageLicenseUrl>
+        <DocumentationFile>bin\Debug\Wd3w.AspNetCore.Permission.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile>bin\Debug\Wd3w.AspNetCore.Permission.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DocumentationFile>bin\Release\Wd3w.AspNetCore.Permission.xml</DocumentationFile>
+    </PropertyGroup>
+
+    
 </Project>

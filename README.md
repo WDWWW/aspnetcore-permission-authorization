@@ -2,6 +2,9 @@
 
 > Simplify ASP.NET Core authorization based on permission
 
+![Build&Test](https://github.com/WDWWW/aspnetcore-permission-authorization/workflows/Build&Test/badge.svg)
+[![Nuget](https://img.shields.io/nuget/v/Wd3w.AspNetCore.Permission)](https://www.nuget.org/packages/Wd3w.AspNetCore.Permission/)
+
 ## Features
 
 - Permission authorization.
