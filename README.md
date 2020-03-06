@@ -45,6 +45,7 @@ public class CustomPermissionProvider : IPermissionNameProvider
 public void ConfigureServices(IServiceCollection services)
 {
     // Add your custom 
+    services.AddAuthorization();
     services.AddPermissionServices<CustomPermissionProvider>(); // register service scoped as default 
     // services.AddPermissionServices<CustomPermissionProvider>(ServiceLifetime.Singleton);
 }
@@ -112,6 +113,7 @@ public class CustomPermissionProvider : EnumPermissionProviderBase<Permissions>
 public void ConfigureServices(IServiceCollection services)
 {
     // Add your custom 
+    services.AddAuthorization();
     services.AddEnumBasedPermissionServices<Permissions, CustomPermissionProvider>(); // register service scoped as default 
     // services.AddPermissionServices<CustomPermissionProvider>(ServiceLifetime.Singleton);
 }

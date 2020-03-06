@@ -6,6 +6,12 @@ namespace Wd3w.AspNetCore.Permission
 {
     public static class PermissionHelper
     {
+        /// <summary>
+        ///    Register system components for enabling authorization based on permission
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="lifetime"></param>
+        /// <typeparam name="TPermissionProvider"></typeparam>
         public static void AddPermissionServices<TPermissionProvider>(this IServiceCollection services, ServiceLifetime lifetime) where TPermissionProvider : class, IPermissionProvider
         {
             services.AddSingleton<IAuthorizationPolicyProvider, PermissionAuthorizationPolicyProvider>();
