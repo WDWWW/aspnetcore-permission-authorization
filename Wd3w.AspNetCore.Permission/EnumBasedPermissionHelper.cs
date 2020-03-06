@@ -29,9 +29,7 @@ namespace Wd3w.AspNetCore.Permission
             where TEnum : struct, Enum
         {
             Verify<TEnum>();
-            services.Add(new ServiceDescriptor(typeof(IAuthorizationPolicyProvider), typeof(PermissionAuthorizationPolicyProvider), lifetime));
-            services.Add(new ServiceDescriptor(typeof(IAuthorizationHandler), typeof(PermissionAuthorizationHandler), lifetime));
-            services.Add(new ServiceDescriptor(typeof(IPermissionProvider), typeof(TEnumPermissionProvider), lifetime));
+            services.AddPermissionServices<TEnumPermissionProvider>(lifetime);
         }
         
         public static void AddEnumBasedPermissionServices<TEnum, TEnumPermissionProvider>(this IServiceCollection services) 

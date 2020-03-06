@@ -1,14 +1,10 @@
-using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Wd3w.TokenAuthentication;
 
 namespace Wd3w.AspNetCore.Permission.Sample
@@ -32,7 +28,8 @@ namespace Wd3w.AspNetCore.Permission.Sample
                     Realm = "www.sample.com",
                     TokenLength = 11
                 });
-            // services.AddPermissionServices<FakePermissionProvider>();
+            services.AddAuthorization();
+            services.AddPermissionServices<FakePermissionProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

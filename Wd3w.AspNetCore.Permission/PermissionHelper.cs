@@ -8,8 +8,8 @@ namespace Wd3w.AspNetCore.Permission
     {
         public static void AddPermissionServices<TPermissionProvider>(this IServiceCollection services, ServiceLifetime lifetime) where TPermissionProvider : class, IPermissionProvider
         {
-            services.Add(new ServiceDescriptor(typeof(IAuthorizationPolicyProvider), typeof(PermissionAuthorizationPolicyProvider), lifetime));
-            services.Add(new ServiceDescriptor(typeof(IAuthorizationHandler), typeof(PermissionAuthorizationHandler), lifetime));
+            services.AddSingleton<IAuthorizationPolicyProvider, PermissionAuthorizationPolicyProvider>();
+            services.AddSingleton<IAuthorizationHandler, PermissionAuthorizationHandler>();
             services.Add(new ServiceDescriptor(typeof(IPermissionProvider), typeof(TPermissionProvider), lifetime));
         }
         

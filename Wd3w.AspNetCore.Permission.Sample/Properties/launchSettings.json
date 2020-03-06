@@ -9,14 +9,6 @@
     }
   },
   "profiles": {
-    "IIS Express": {
-      "commandName": "IISExpress",
-      "launchBrowser": true,
-      "launchUrl": "weatherforecast",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
     "Wd3w.AspNetCore.Permission.Sample": {
       "commandName": "Project",
       "launchBrowser": true,
